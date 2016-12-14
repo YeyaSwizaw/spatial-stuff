@@ -1,0 +1,6 @@
+build/
+generated/
+server
+*.make
+Makefile
+worker_sdk/*

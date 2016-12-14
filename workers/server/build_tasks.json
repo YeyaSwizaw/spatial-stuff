@@ -1,0 +1,30 @@
+{
+    "tasks": [{
+        "name": "Clean",
+        "steps": [{
+            "name": "premake",
+            "command": "premake4",
+            "arguments": ["clean"]
+        }]
+    }, {
+        "name": "Codegen",
+        "steps": [{
+            "name": "run",
+            "arguments": ["process_schema", "-i", "../../build/dependencies/schema", "-i", "../../schema", "-L", "cpp", "-o", "generated"]
+        }]
+    }, {
+        "name": "Build",
+        "steps": [{
+            "name": "codegen",
+            "arguments": ["invoke-task", "Codegen"]
+        }, {
+            "name": "premake",
+            "command": "premake4",
+            "arguments": ["gmake"]
+        }, {
+            "name": "make",
+            "command": "make",
+            "arguments": ["server"]
+        }]
+    }]
+}

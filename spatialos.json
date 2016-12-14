@@ -1,0 +1,10 @@
+{
+    "name": "alpha_asparagus_two_573",
+    "project_version": "0.0.1",
+    "sdk_version": "9.0.2",
+
+    "dependencies": [{
+        "name": "WorkerSdkSchema", 
+        "version": "9.0.2"
+    }]
+}

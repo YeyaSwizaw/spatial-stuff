@@ -1,0 +1,7 @@
+package position;
+
+component Position {
+    id = 1001;
+
+    EntityPosition position = 1;
+}

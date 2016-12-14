@@ -1,0 +1,33 @@
+{
+    "build": {
+        "tasks_filename": "build_tasks.json"
+    },
+
+    "bridge": {
+        "workerClaim": {
+            "claims": ["physics"]
+        },
+
+        "entity_interest": {
+            "range_entity_interest": {
+                "radius": 5
+            }
+        },
+
+        "streamingQuery": [],
+
+        "component_delivery": {
+            "default": "RELIABLE_ORDERED",
+            "checkout_all_initially": true
+        }
+    },
+
+    "external": {
+        "test": {
+            "run_type": "EXECUTABLE",
+            "macos": {
+                "command": "./server"
+            }
+        }
+    }
+}

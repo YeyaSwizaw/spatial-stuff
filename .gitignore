@@ -1,0 +1,6 @@
+.improbable/
+logs/
+build/
+spatial.log
+*.swp
+spatialos_worker_packages.json
