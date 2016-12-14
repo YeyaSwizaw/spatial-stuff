@@ -4,10 +4,10 @@ solution "Server Worker"
 project "server"
 	kind "ConsoleApp"
 	language "C++"
-	files { "src/**" }
+	files { "src/**", "generated/*.cc" }
 	links { "WorkerSdk", "CoreSdk", "protobuf", "gpr", "grpc", "grpc++", "z", "RakNetLibStatic", "ssl" }
     libdirs { "worker_sdk/lib" }
-    includedirs { "worker_sdk/include" }
+    includedirs { "worker_sdk/include", ".", "generated" }
 	objdir "build/obj"
 	buildoptions { "-std=c++14" }
 
